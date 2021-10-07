@@ -10,6 +10,7 @@ to_nums['McLachlan'] = {'A':0, 'C':1, 'D':2, 'E':3, 'F':4, 'G':5, 'H':6, 'I':7, 
            'Q':13, 'R':14, 'S':15, 'T':16, 'V':17, 'W':18, 'Y':19}
 to_nums['BLOSUM62'] = {'A':0, 'R':1, 'N':2, 'D':3,  'C':4,  'Q':5,  'E':6,  'G':7,  'H':8,  'I':9,  'L':10,  'K':11,  'M':12,
                        'F':13, 'P':14,  'S':15,  'T':16,  'W':17,  'Y':18,  'V':19,  'B':20,  'Z':21,  'X':22, '-':23}
+to_nums['EQUIV'] = to_nums['BLOSUM62']
 
 
 def aa_to_num_McLachlan(aa):
@@ -17,6 +18,7 @@ def aa_to_num_McLachlan(aa):
         num = to_nums['McLachlan'][aa]
     except KeyError:
         num = -1
+        #print("UNDEF\n")
     return num
 
 
@@ -25,31 +27,17 @@ def aa_to_num_BLOSUM62(aa):
         num = to_nums['BLOSUM62'][aa]
     except KeyError:
         num = -1
+        print(aa, '\n')
     return num
 
 
-
-
-mat_mclachlan = np.array([[8, 1, 3, 4, 1, 3, 3, 2, 3, 2, 3, 3, 4, 3, 2, 4, 3, 3, 1, 1],
-                          [1, 9, 1, 0, 0, 1, 3, 1, 0, 0, 3, 1, 0, 0, 1, 2, 2, 1, 2, 1],
-                          [3, 1, 8, 5, 1, 3, 4, 0, 3, 1, 2, 5, 3, 4, 1, 3, 3, 1, 0, 1],
-                          [4, 0, 5, 8, 0, 3, 2, 1, 4, 1, 1, 4, 4, 5, 3, 4, 4, 2, 1, 2],
-                          [1, 0, 1, 0, 9, 0, 4, 3, 0, 5, 5, 0, 1, 0, 1, 2, 1, 3, 6, 6],
-                          [3, 1, 3, 3, 0, 8, 2, 1, 3, 1, 1, 3, 3, 2, 3, 3, 2, 2, 1, 0],
-                          [3, 3, 4, 2, 4, 2, 8, 2, 4, 2, 3, 4, 3, 4, 5, 3, 4, 2, 3, 4],
-                          [2, 1, 0, 1, 3, 1, 2, 8, 1, 5, 5, 1, 1, 0, 1, 2, 3, 5, 3, 3],
-                          [3, 0, 3, 4, 0, 3, 4, 1, 8, 2, 1, 4, 3, 4, 5, 3, 3, 2, 1, 1],
-                          [2, 0, 1, 1, 5, 1, 2, 5, 2, 8, 6, 1, 1, 3, 2, 2, 3, 5, 3, 3],
-                          [3, 3, 2, 1, 5, 1, 3, 5, 1, 6, 8, 2, 1, 3, 1, 2, 3, 4, 1, 2],
-                          [3, 1, 5, 4, 0, 3, 4, 1, 4, 1, 2, 8, 1, 4, 3, 5, 3, 1, 0, 2],
-                          [4, 0, 3, 4, 1, 3, 3, 1, 3, 1, 1, 1, 8, 3, 3, 3, 3, 2, 0, 0],
-                          [3, 0, 4, 5, 0, 2, 4, 0, 4, 3, 3, 4, 3, 8, 5, 4, 3, 2, 2, 1],
-                          [2, 1, 1, 3, 1, 3, 5, 1, 5, 2, 1, 3, 3, 5, 8, 4, 3, 2, 3, 2],
-                          [4, 2, 3, 4, 2, 3, 3, 2, 3, 2, 2, 5, 3, 4, 4, 8, 5, 2, 3, 3],
-                          [3, 2, 3, 4, 1, 2, 4, 3, 3, 3, 3, 3, 3, 3, 3, 5, 8, 3, 2, 1],
-                          [3, 1, 1, 2, 3, 2, 2, 5, 2, 5, 4, 1, 2, 2, 2, 2, 3, 8, 2, 3],
-                          [1, 2, 0, 1, 6, 1, 3, 3, 1, 3, 1, 0, 0, 2, 3, 3, 2, 2, 9, 6],
-                          [1, 1, 1, 2, 6, 0, 4, 3, 1, 3, 2, 2, 0, 1, 2, 3, 1, 3, 6, 9]])
+def aa_to_num_EQUIV(aa):
+    try:
+        num = to_nums['EQUIV'][aa]
+    except KeyError:
+        num = -1
+        print(aa, '\n')
+    return num
 
 
 def calc_corr(msa, type='McLachlan'):
@@ -67,6 +55,9 @@ def calc_corr(msa, type='McLachlan'):
     elif type == 'BLOSUM62':
         aa_to_num = aa_to_num_BLOSUM62
         c_type = 1
+    elif type == 'EQUIV':
+        aa_to_num = aa_to_num_EQUIV
+        c_type = 2
     else:
         return
     for i in range(N):
@@ -89,7 +80,7 @@ def calc_corr(msa, type='McLachlan'):
 def main():
 
     code = "1g2rA"
-    typ = "BLOSUM62"
+    typ = "EQUIV"
     msa = Bio.AlignIO.read("data/msa/"+code+".fasta", "fasta")
     '''
     COL = c_double * 3
@@ -97,7 +88,8 @@ def main():
     b = COL
     a[0] = 1
     '''
-    corr = calc_corr(msa, type="BLOSUM62")
+    corr = calc_corr(msa, type=typ)
+    print("Calculation Completed\n")
     np.savetxt("data/corr/"+typ+"/corr_"+typ+"_"+code+".txt", corr, delimiter=" ")
     heatmap(corr, lim='a')
 

@@ -6,10 +6,10 @@ from plot_heatmap import *
 from metrics import *
 
 
-code = "1ctfA"
-typ = "BLOSUM62"
+code = "1g2rA"
+typ = "EQUIV"
 pdb_filename = "./data/pdb/"+code+".pdb"
-gap = 23
+gap = 4
 
 
 def main():
