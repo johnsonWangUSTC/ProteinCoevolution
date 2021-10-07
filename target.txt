@@ -1,0 +1,152 @@
+PDB-ID  Pfam-ID Nseq    Length  Description
+=====================================================================================================
+1GUUA   PF00249 10393   50      Myb-like DNA-binding domain
+1BRFA   PF00301 1430    53      Rubredoxin
+1AAPA   PF00014 2256    56      Kunitz/Bovine pancreatic trypsin inhibitor domain
+1JO8A   PF00018 6287    58      SH3 domain
+1KU3A   PF04545 8439    61      Sigma-70, region 4
+1M8AA   PF00048 1062    61      Small cytokines (intecrine/chemokine), interleukin-8 like
+1C9OA   PF00313 6807    66      'Cold-shock' DNA-binding domain
+1VFYA   PF01363 1645    67      FYVE zinc finger
+1CTFA   PF00542 2390    68      Ribosomal protein L7/L12 C-terminal domain
+1KW4A   PF07647 1192    70      SAM domain (Sterile alpha motif)
+1CC8A   PF00403 9383    72      Heavy-metal-associated domain
+1ATZA   PF00092 7567    75      von Willebrand factor type A domain
+1TIFA   PF05198 1947    76      Translation initiation factor IF-3, N-terminal domain
+1H98A   PF00037 10421   77      4Fe-4S binding domain
+1T8KA   PF00550 20685   77      Phosphopantetheine attachment site
+1BDOA   PF00364 11826   80      Biotin-requiring enzyme
+1AVSA   PF00036 13234   81      EF hand
+1CXYA   PF00173 3200    81      Cytochrome b5-like Heme/Steroid binding domain
+1I71A   PF00051 1082    83      Kringle domain
+1ABAA   PF00462 5749    87      Glutaredoxin
+1DSXA   PF02214 1372    87      K+ channel tetramerisation domain
+1SMXA   PF10150 2203    87      Ribonuclease E/G family
+1NPSA   PF00030 1153    88      Beta/Gamma crystallin
+1PCHA   PF00381 3344    88      PTS HPr component phosphorylation site
+1VJKA   PF02597 3283    88      ThiS family
+1FNAA   PF00041 17137   91      Fibronectin type III domain
+1G9OA   PF00595 14944   91      PDZ domain (Also known as DHR or GLGF)
+1FK5A   PF00234 3346    93      Protease inhibitor/seed storage/LTP family
+1G2RA   PF04296 1037    94      Protein of unknown function (DUF448)
+1A70A   PF00111 10732   97      2Fe-2S iron-sulfur cluster binding domain
+1JO0A   PF01985 1482    97      CRS1 / YhbY (CRM) domain
+1MK0A   PF01541 4455    97      GIY-YIG catalytic domain
+1AG6A   PF00127 1057    99      Copper binding proteins, plastocyanin/azurin family
+2HS1A   PF00077 72785   99      Retroviral aspartyl protease
+1JOSA   PF02033 2010    100     Ribosome-binding factor A
+1NRVA   PF00017 3052    100     SH2 domain
+1SVYA   PF00626 2190    101     Gelsolin repeat
+1D0QA   PF01807 2445    102     CHC2 zinc finger
+1EAZA   PF00169 5484    103     PH domain
+1IIBA   PF02302 6799    103     PTS system, Lactose/Cellobiose specific IIB subunit
+1TQGA   PF01627 5672    105     Hpt domain
+1I1JA   PF07653 2128    106     Variant SH3 domain
+1GMXA   PF00581 14043   107     Rhodanese-like domain
+1VMBA   PF01250 2145    107     Ribosomal protein S6
+1BKRA   PF00307 4137    108     Calponin homology (CH) domain
+1FQTA   PF00355 7519    109     Rieske [2Fe-2S] domain
+1H4XA   PF01740 6240    110     STAS domain
+1I4JA   PF00237 3068    110     Ribosomal protein L22p/L17e
+1ROAA   PF00031 1106    111     Cystatin domain
+1FX2A   PF00211 4633    112     Adenylate and Guanylate cyclase catalytic domain
+1WJXA   PF01668 2073    112     SmpB protein
+1R26A   PF00085 12592   113     Thioredoxin
+1RW1A   PF03960 3279    114     ArsC family
+1DLWA   PF01152 1113    116     Bacterial-like globin
+2MHRA   PF01814 3842    118     Hemerythrin HHE cation binding domain
+1WHIA   PF00238 2897    122     Ribosomal protein L14p/L23e
+2CUAA   PF00116 22284   122     Cytochrome C oxidase subunit II, periplasmic domain
+1C44A   PF02036 1826    123     SCP-2 sterol transfer family
+1P90A   PF02579 1133    123     Dinitrogenase iron-molybdenum cofactor
+1PKOA   PF07686 6868    124     Immunoglobulin V-set domain
+2PHYA   PF00989 13767   125     PAS fold
+1JBEA   PF00072 75322   126     Response regulator receiver domain
+1J3AA   PF00572 2582    129     Ribosomal protein L13
+1C52A   PF00034 11260   131     Cytochrome c
+1M4JA   PF00241 1170    133     Cofilin/tropomyosin-type actin-binding protein
+1VP6A   PF00027 13081   133     Cyclic nucleotide-binding domain
+1DQGA   PF00652 2066    134     Ricin-type beta-trefoil lectin domain
+1GMIA   PF00168 8036    135     C2 domain
+1IHZA   PF00565 2131    136     Staphylococcal nuclease homologue
+1KTGA   PF00293 20076   137     NUDIX domain
+1QJPA   PF01389 1401    137     OmpA-like transmembrane domain
+1GZ2A   PF00059 4876    138     Lectin C-type domain
+1EJ8A   PF00080 2031    140     Copper/zinc superoxide dismutase (SODC)
+1KQ6A   PF00787 2818    140     PX domain
+1LO7A   PF03061 5499    140     Thioesterase superfamily
+1TZVA   PF01029 3542    141     NusB family
+1K6KA   PF02861 7835    142     Clp amino terminal domain
+1I5GA   PF00578 9016    144     AhpC/TSA family
+1A3AA   PF00359 6603    145     Phosphoenolpyruvate-dependent sugar phosphotransferase system, EIIA 2
+1NB9A   PF01687 2127    147     Riboflavin kinase
+3DQGA   PF00012 6859    148     Hsp70 protein
+1A6MA   PF00042 3942    151     Globin
+1DBXA   PF04073 4242    152     YbaK / prolyl-tRNA synthetases associated domain
+1JL1A   PF00075 11782   152     RNase H
+1JYHA   PF06445 2866    155     Bacterial transcription activator, effector binding domain
+1BEBA   PF00061 1031    156     Lipocalin / cytosolic fatty-acid binding protein family
+1HFCA   PF00413 1421    157     Matrixin
+1HTWA   PF02367 1941    158     Uncharacterised P-loop hydrolase UPF0079
+1D1QA   PF01451 3717    159     Low molecular weight phosphotyrosine protein phosphatase
+1JVWA   PF00254 7529    160     FKBP-type peptidyl-prolyl cis-trans isomerase
+1KQRA   PF00426 2015    160     Outer Capsid protein VP4 (Hemagglutinin)
+2ARCA   PF02311 4647    161     AraC-like ligand binding domain
+1LPYA   PF00959 1203    162     Phage lysozyme
+1FL0A   PF01588 4770    164     Putative tRNA binding domain
+1MUGA   PF03167 4654    165     Uracil DNA glycosylase superfamily
+1CJWA   PF00583 46279   166     Acetyltransferase (GNAT) family
+1EK0A   PF00071 10390   168     Ras family
+1WKCA   PF01812 2130    168     5-formyltetrahydrofolate cyclo-ligase family
+1CZNA   PF00258 4606    169     Flavodoxin
+1DMGA   PF00573 2600    172     Ribosomal protein L4/L1 family
+1F6BA   PF00025 2689    176     ADP-ribosylation factor family
+1JFUA   PF08534 4564    176     Redoxin
+1NE2A   PF06325 2284    176     Ribosomal protein L11 methyltransferase (PrmA)
+1D4OA   PF02233 1140    177     NAD(P) transhydrogenase beta subunit
+1IM5A   PF00857 6033    179     Isochorismatase family
+1JWQA   PF01520 3396    179     N-acetylmuramoyl-L-alanine amidase
+1EJ0A   PF01728 5670    180     FtsJ-like methyltransferase
+1H0PA   PF00160 6282    182     Cyclophilin type peptidyl-prolyl cis-trans isomerase/CLD
+1BEHA   PF01161 2179    184     Phosphatidylethanolamine-binding protein
+1GBSA   PF01464 6655    185     Transglycosylase SLT domain
+1RYBA   PF01195 2148    186     Peptidyl-tRNA hydrolase
+1FVKA   PF01323 4128    188     DSBA-like thioredoxin domain
+1I58A   PF02518 70410   189     Histidine kinase-, DNA gyrase B-, and HSP90-like ATPase
+1JBKA   PF00004 28986   189     ATPase family associated with various cellular activities (AAA)
+1LM4A   PF01327 3326    189     Polypeptide deformylase
+1AOEA   PF00186 2624    192     Dihydrofolate reductase
+1FVGA   PF01625 2971    192     Peptide methionine sulfoxide reductase
+1HH8A   PF00515 25785   192     Tetratricopeptide repeat
+1VHUA   PF01661 2450    192     Macro domain
+1KIDA   PF00118 15731   193     TCP-1/cpn60 chaperonin family
+1QF9A   PF00406 5891    194     Adenylate kinase
+3BORA   PF00270 10450   194     DEAD/DEAH box helicase
+1CHDA   PF01339 1863    198     CheB methylesterase
+1ATLA   PF01421 1108    200     Reprolysin (M12B) family zinc metalloprotease
+1W0HA   PF00929 7766    200     Exonuclease
+1HDOA   PF05368 4891    205     NmrA-like family
+1XKRA   PF04509 1408    205     CheC-like family
+1K7JA   PF01300 3738    206     yrdC domain
+1H2EA   PF00300 10034   207     Histidine phosphatase superfamily (branch 1)
+1DIXA   PF00445 2081    208     Ribonuclease T2 family
+1JKXA   PF00551 6100    209     Formyl transferase
+1HXNA   PF00045 1842    210     Hemopexin
+1CKEA   PF02224 1937    212     Cytidylate kinase
+1IWDA   PF00112 4303    215     Papain family cysteine protease
+1JFXA   PF01183 1640    217     Glycosyl hydrolases family 25
+5PTPA   PF00089 13370   222     Trypsin
+1I1NA   PF01135 1811    224     Protein-L-isoaspartate(D-aspartate) O-methyltransferase (PCMT)
+1O1ZA   PF03009 4598    226     Glycerophosphoryl diester phosphodiesterase family
+2TPSA   PF02581 2620    226     Thiamine monophosphate synthase/TENI
+1K7CA   PF00657 6189    233     GDSL-like Lipase/Acylhydrolase
+1NY1A   PF01522 6604    235     Polysaccharide deacetylase
+1RW7A   PF01965 6848    235     DJ-1/PfpI family
+1FCYA   PF00104 3504    236     Ligand-binding domain of nuclear hormone receptor
+1XDZA   PF02527 1941    238     rRNA small subunit methyltransferase G
+1XFFA   PF00310 7438    238     Glutamine amidotransferases class-II
+1GZCA   PF00139 1056    239     Legume lectin domain
+1QL0A   PF01223 1190    241     DNA/RNA non-specific endonuclease
+1TQHA   PF00326 4375    242     Prolyl oligopeptidase family
+2VXNA   PF00121 3355    249     Triosephosphate isomerase
+1BSGA   PF00144 4688    266     Beta-lactamase

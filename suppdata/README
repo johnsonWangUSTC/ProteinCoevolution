@@ -1,0 +1,23 @@
+This is the raw data for the 150 protein test set described in:
+
+PSICOV: precise structural contact prediction using sparse inverse covariance estimation on large multiple sequence alignments.
+D.T. Jones, D. W. A. Buchan, D. Cozzetto & M. Pontil. Bioinformatics (2012) 28 (2): 184-190.
+
+The alignments correspond to the sequence represented in each PDB file (missing atoms have been added where necessary). So there
+are exactly the same number of columns in each alignment as C-alpha ATOM records in each PDB file as gaps relative to the target
+sequence have been removed.
+
+Directory information:
+
+aln - contains the alignments. One aligned sequence per line with no header information.
+seq - contains the target sequences in FASTA format.
+con - contains the predictions made using PSICOV and the given alignments.
+pdb - contains the repaired and renumbered PDB files for the 150 targets.
+
+The format of the .out files is as follows:
+
+column 1 - Residue number i
+column 2 - Residue number j
+column 3 - Minimum distance (dummy value - ignore!)
+column 4 - Maximum distance (dummy value - ignore!)
+column 5 - Contact prediction score (sorted by this column)
