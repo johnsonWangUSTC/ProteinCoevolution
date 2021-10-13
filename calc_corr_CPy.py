@@ -79,7 +79,7 @@ def calc_corr(msa, type='McLachlan'):
 
 def main():
 
-    code = "1g2rA"
+    code = "1ctfA"
     typ = "EQUIV"
     msa = Bio.AlignIO.read("data/msa/"+code+".fasta", "fasta")
     '''

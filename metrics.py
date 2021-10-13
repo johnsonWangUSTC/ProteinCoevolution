@@ -102,9 +102,42 @@ def top_k_acc(contact_map, est_contact_map, k, gap=0):
         if test[r, c] == 0:
             return rec / i
 
-        test[r, c] = 0
+        test[r, c] = - 1e4
         if contact_map[r, c] != 0:
             rec += 1
+
+    return rec / k
+
+
+def top_k_acc_psicov(contact_map, idx, k, gap):
+
+    k = int(k)
+    i = order = 0
+    count = 0
+    while order < k:
+        if abs(idx[0, i] - idx[1, i]) > gap:
+            order += 1
+            if contact_map[idx[0, i], idx[1, i]] != 0:
+                count += 1
+        i += 1
+    return count / k
+
+
+
+def read_top_k(contact_map, k, gap=0):
+
+    test = np.triu(contact_map, gap + 1)
+    k = int(k)
+    p = contact_map.shape[0]
+    rec = 0
+
+    for i in range(k):
+        p1 = np.argmax(test)
+        r = p1 // p
+        c = p1 - r * p
+
+        test[r, c] = 0
+        print(r+1, c+1)
 
     return rec / k
 
@@ -112,12 +145,15 @@ def top_k_acc(contact_map, est_contact_map, k, gap=0):
 def apc(score):
 
     p = score.shape[0]
-    row = np.mean(score,axis=1)
-    m = np.mean(score)
+    row = (np.sum(score, axis=1) - np.diag(score)) / (p-1)
+    m = np.sum(np.triu(score, 1)) / (p * (p-1))
 
     out = np.zeros_like(score)
     for i in range(p):
         for j in range(i+1):
-            out[i, j] = out[j, i] = score[i, j] - row[i] * row[j] / m
+            if score[i, j] != 0:
+                out[i, j] = out[j, i] = score[i, j] - row[i] * row[j] / m
+            else:
+                out[i, j] = 0
 
     return out

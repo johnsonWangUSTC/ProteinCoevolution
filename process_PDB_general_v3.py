@@ -6,7 +6,7 @@ from plot_heatmap import *
 from metrics import *
 
 
-code = "1g2rA"
+code = "1dlwA"
 typ = "EQUIV"
 pdb_filename = "./data/pdb/"+code+".pdb"
 gap = 4
@@ -28,9 +28,10 @@ def main():
     #return
 
     corr = np.loadtxt("data/corr/"+typ+"/corr_"+typ+"_"+code+".txt")
-    model = graphical_lasso(corr, alpha=.01, tol=1e-8, enet_tol=1e-8, max_iter=500)
+    model = graphical_lasso(corr, alpha=.15, tol=1e-8, enet_tol=1e-8, max_iter=500)
     prec = model[1]
     est_contact_map = to_contact(prec, gap=gap)
+    est_contact_map = apc(est_contact_map)
     #heatmap(est_contact_map, lim='b', cmap='Blues')
     cpr = merge_contact_map(contact_map, est_contact_map)
     heatmap(cpr, lim='b', cmap='Blues')
