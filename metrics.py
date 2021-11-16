@@ -102,7 +102,7 @@ def top_k_acc(contact_map, est_contact_map, k, gap=0):
         if test[r, c] == 0:
             return rec / i
 
-        test[r, c] = - 1e4
+        test[r, c] = 1e-4
         if contact_map[r, c] != 0:
             rec += 1
 
@@ -157,3 +157,4 @@ def apc(score):
                 out[i, j] = 0
 
     return out
+

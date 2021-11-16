@@ -36,11 +36,11 @@ def aa_to_num_EQUIV(aa):
         num = to_nums['EQUIV'][aa]
     except KeyError:
         num = -1
-        print(aa, '\n')
+        #print(aa, '\n')
     return num
 
 
-def calc_corr(msa, type='McLachlan', gap_ratio=0.99):
+def calc_cov(msa, type='McLachlan', gap_ratio=0.99):
 
     N = len(msa)
     L = len(list(msa[0]._seq))
@@ -83,37 +83,44 @@ def calc_corr(msa, type='McLachlan', gap_ratio=0.99):
 
     func = CDLL("calc_corr_C.dll")
     #func.calc_cov_C.argtypes = (MAT, c_int, c_int)
-    func.calc_corr_C.restype = (POINTER(POINTER(c_float)))
-    c_corr = func.calc_corr_C(c_MSA, c_int(N), c_int(valid_L), c_int(c_type))
-    corr = np.zeros([L, L])
+    func.calc_cov_C.restype = (POINTER(POINTER(c_float)))
+    c_cov = func.calc_cov_C(c_MSA, c_int(N), c_int(valid_L), c_int(c_type))
+    cov = np.zeros([L, L])
     for i in range(valid_L):
         for j in range(valid_L):
-            corr[valid_pos[i], valid_pos[j]] = c_corr[i][j]
-            print(c_corr[i][j])
+            cov[valid_pos[i], valid_pos[j]] = c_cov[i][j]
+            print(c_cov[i][j])
     pop_idx = list()
     for i in range(valid_L):
-        if corr[valid_pos[i], valid_pos[i]] == 0:
+        if cov[valid_pos[i], valid_pos[i]] == 0:
             pop_idx.append(i)
     pop_idx = sorted(pop_idx, reverse=True)
     print(pop_idx)
     for i in pop_idx:
         valid_pos.pop(i)
-    corr = corr[valid_pos, :]
-    corr = corr[:, valid_pos]
-    return corr, valid_pos
+    cov = cov[valid_pos, :]
+    cov = cov[:, valid_pos]
+    return cov, valid_pos
+
 
 
 def main():
 
-    code = "1aapA"
+    code = "1dlwA"
     typ = "EQUIV"
     msa = Bio.AlignIO.read("data/msa/"+code+".fasta", "fasta")
-
-    corr, valid_pos = calc_corr(msa, type=typ, gap_ratio=0.1)
+    '''
+    COL = c_double * 3
+    a = COL
+    b = COL
+    a[0] = 1
+    '''
+    cov, valid_pos = calc_cov(msa, type=typ, gap_ratio=0.2)
     print("Calculation Completed\n")
-    np.savetxt("data/corr/"+typ+"/corr_"+typ+"_"+code+".txt", corr, delimiter=" ")
-    np.savetxt("data/corr/" + typ + "/vpos_" + typ + "_" + code + ".txt", valid_pos, delimiter=" ")
-    heatmap(corr, lim='a')
+    np.savetxt("data/cov/"+typ+"/cov_"+typ+"_"+code+".txt", cov, delimiter=" ")
+    np.savetxt("data/cov/" + typ + "/vpos_" + typ + "_" + code + ".txt", valid_pos, delimiter=" ")
+    heatmap(cov, lim='a')
+    print(valid_pos)
 
 
 if __name__ == '__main__':

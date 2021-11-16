@@ -83,8 +83,8 @@ def calc_corr(msa, type='McLachlan', gap_ratio=0.99):
 
     func = CDLL("calc_corr_C.dll")
     #func.calc_cov_C.argtypes = (MAT, c_int, c_int)
-    func.calc_corr_C.restype = (POINTER(POINTER(c_float)))
-    c_corr = func.calc_corr_C(c_MSA, c_int(N), c_int(valid_L), c_int(c_type))
+    func.calc_corr_C_v2.restype = (POINTER(POINTER(c_float)))
+    c_corr = func.calc_corr_C_v2(c_MSA, c_int(N), c_int(valid_L), c_int(c_type))
     corr = np.zeros([L, L])
     for i in range(valid_L):
         for j in range(valid_L):
@@ -105,14 +105,14 @@ def calc_corr(msa, type='McLachlan', gap_ratio=0.99):
 
 def main():
 
-    code = "1aapA"
+    code = "1ag6A"
     typ = "EQUIV"
     msa = Bio.AlignIO.read("data/msa/"+code+".fasta", "fasta")
 
     corr, valid_pos = calc_corr(msa, type=typ, gap_ratio=0.1)
     print("Calculation Completed\n")
-    np.savetxt("data/corr/"+typ+"/corr_"+typ+"_"+code+".txt", corr, delimiter=" ")
-    np.savetxt("data/corr/" + typ + "/vpos_" + typ + "_" + code + ".txt", valid_pos, delimiter=" ")
+    np.savetxt("data/corr/"+typ+"_v2/corr_"+typ+"_"+code+".txt", corr, delimiter=" ")
+    np.savetxt("data/corr/" + typ + "_v2/vpos_" + typ + "_" + code + ".txt", valid_pos, delimiter=" ")
     heatmap(corr, lim='a')
 
 
